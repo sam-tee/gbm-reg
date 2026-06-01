@@ -1,0 +1,82 @@
+[dirs]
+temp = "./temp"
+preprocessed = "./prep"
+patients = "./patients"
+registered = "./outputs"
+
+[pipeline]
+preprocess = true
+segment = true
+register = true
+
+[preprocessing]
+# 3 letter orientation to roughly align axes to
+# options are L/R, A/P, I/S
+orientation = "RAS"
+# factor to shrink scans by for bias correction
+bias_shrink_factor = 2
+# algorithm to use for skull stripping
+# one of [ hd-bet, fsl-bet ]
+# hd-bet is preferred but fsl-bet can be used if needed
+skull_strip_algorithm = "hd-bet"
+# flags to add to hd-bet - see uv run hd-bet -h
+# should be in form of list of strings
+# already includes --save-bet-mask
+hd_bet_flags = []
+# threshold to use for fsl_bet
+fsl_bet_threshold = 0.5
+# algorithm used to generate tissue mask for post mortem scans
+# one of [ gmm, otsu ]
+tissue_mask_algorithm = "otsu"
+# intensity normalisation method to used
+# one of [ z-score, min-max ]
+normalisation_method = "z-score"
+# min intensity for min-max
+min_intensity = 0
+# max intensity for min-max
+max_intensity = 255
+
+[segmentation]
+# scan to use for synthseg - can be any modality
+synthseg_scan = "t1"
+# extra flags to use for synthseg - see mri_synthseg -h
+synthseg_flags = []
+# path to swinUNETR model weights - see README.md for link
+swin_unetr_model_path = "./models/swinUNETR.pt"
+# device for torch
+device = "cuda"
+# algorithm for ex-vivo segmentation
+# one of [gmm, medsam2]
+exvivo_label_algorithm = "gmm"
+# number of classes for gmm segmentation
+gmm_classes = 3
+# MedSAM2 settings used when exvivo_label_algorithm = "medsam2"
+medsam2_checkpoint = "./models/MedSAM2_latest.pt"
+medsam2_model_cfg = "configs/sam2.1_hiera_t512.yaml"
+# Optional local clone of https://github.com/bowang-lab/MedSAM2
+medsam2_repo_path = null
+# contrast used to generate the automatic MedSAM2 prompt and propagation input
+medsam2_prompt_scan = "t2"
+# NIfTI axis treated as the slab stack/depth axis
+medsam2_slice_axis = 2
+medsam2_bbox_margin = 8
+medsam2_image_size = 512
+# Also create PostMortem/<slab>/tumour_labels.nii.gz using an automated
+# high-intensity T2 prompt refined by MedSAM2. Label 2 matches the existing
+# oedema/tumour ROI convention used by registration.
+medsam2_tumour_labels = true
+medsam2_tumour_label = 2
+medsam2_tumour_prompt_percentile = 90.0
+medsam2_tumour_prompt_min_fraction = 0.002
+
+[registration]
+# one of [ intensity, segmentation ]
+image_type = "segmentation"
+# A-P spacing in mm between initialized slab positions
+ap_step_mm = 5.0
+# Limit candidate A-P positions during test runs; use null for all positions
+max_positions = null
+# Build initialized slabs, masks, and no-registration metrics only
+skip_registration = false
+# Build masks/metadata only, without metrics or affine registrations
+masks_only = false

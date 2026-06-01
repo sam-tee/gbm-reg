@@ -1,0 +1,15 @@
+[PreMortem]
+t1 = "/home/sl2110/nifti/IM003/PostSurgery/QL3A/Ax_T1_SE.nii.gz"
+t1c = "/home/sl2110/nifti/IM003/PostSurgery/QL3A/STEALTH.nii.gz"
+t2 = "/home/sl2110/nifti/IM003/PostSurgery/QL3A/Ax_T2_FSE.nii.gz"
+flair = "/home/sl2110/nifti/IM003/PostSurgery/QL3A/Ax_T2_FLAIR.nii.gz"
+
+[PostMortem]
+[PostMortem.CBB]
+t1 = "/home/sl2110/nifti/IM003/PostMortem/CBB408_01/140001_T1_FLASH_3D_iso.nii.gz"
+t2 = "/home/sl2110/nifti/IM003/PostMortem/CBB408_01/200001_T2_TurboRARE.nii.gz"
+flips = [0]
+[PostMortem.NP18]
+t1 = "/home/sl2110/nifti/IM003/PostMortem/NP18_E18_P1/20001_T1_FLASH_3D_iso.nii.gz"
+t2 = "/home/sl2110/nifti/IM003/PostMortem/NP18_E18_P1/50001_T2_TurboRARE.nii.gz"
+flips = []

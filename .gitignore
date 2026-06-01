@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.ruff_cache/
+
+# Virtual environments
+.venv/
+
+# OS/editor noise
+.DS_Store
+
+# Local data, generated pipeline outputs, and model weights
+data/
+models/
+outputs/
+preprocessed/
+prep/
+temp/
+/render/

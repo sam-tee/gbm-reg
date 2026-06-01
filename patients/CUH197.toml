@@ -1,0 +1,29 @@
+[PostSurgery]
+t1 = "/home/sl2110/nifti/CUH197/PostSurgery/QL911A/012_t1_fl3d_sag_p2_iso.nii.gz"
+t1c = "/home/sl2110/nifti/CUH197/PostSurgery/QL911A/018_t1_fl3d_sag_p2_iso___contrast.nii.gz"
+t2 = "/home/sl2110/nifti/CUH197/PostSurgery/QL911A/011_t2_tse_tra_512.nii.gz"
+flair = "/home/sl2110/nifti/CUH197/PostSurgery/QL911A/015_t2_space_dark_fluid_sag_cs5_6_iso.nii.gz"
+
+[PreMortem]
+t1 = "/home/sl2110/nifti/CUH197/PreMortem/QL10A/7_t1_se_cor.nii.gz"
+t1c = "/home/sl2110/nifti/CUH197/PreMortem/QL10A/8_t1_fl3d_sag_p2_iso_post_contrast.nii.gz"
+t2 = "/home/sl2110/nifti/CUH197/PreMortem/QL10A/5_t2_fl2d_tra_hemo.nii.gz"
+flair = "/home/sl2110/nifti/CUH197/PreMortem/QL10A/6_t2_tirm_sag_dark-fluid_.nii.gz"
+
+[PostMortem]
+[PostMortem.E1P1]
+t1 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E1_P1/20001_T1_FLASH_3D_iso.nii.gz"
+t2 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E1_P1/50001_T2_TurboRARE.nii.gz"
+flips = [1,2]
+[PostMortem.E4P1]
+t1 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E4_P1/30001_T1_FLASH_3D_iso.nii.gz"
+t2 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E4_P1/60001_T2_TurboRARE.nii.gz"
+flips = [0,1]
+[PostMortem.E5P1]
+t1 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E5_P1/20001_T1_FLASH_3D_iso.nii.gz"
+t2 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E5_P1/50001_T2_TurboRARE.nii.gz"
+flips = [1]
+[PostMortem.E6P1]
+t1 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E6_P1/20001_T1_FLASH_3D_iso.nii.gz"
+t2 = "/home/sl2110/nifti/CUH197/PostMortem/BB23_E6_P1/50001_T2_TurboRARE.nii.gz"
+flips = [0]
