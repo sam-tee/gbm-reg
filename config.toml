@@ -75,7 +75,7 @@ image_type = "segmentation"
 # A-P spacing in mm between initialized slab positions
 ap_step_mm = 5.0
 # Limit candidate A-P positions during test runs; use null for all positions
-max_positions = null
+# max_positions = null
 # Build initialized slabs, masks, and no-registration metrics only
 skip_registration = false
 # Build masks/metadata only, without metrics or affine registrations
