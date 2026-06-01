@@ -4,6 +4,8 @@ MRI preprocessing, segmentation, and slab-to-volume registration tools for align
 
 The pipeline is configured with TOML files. It can preprocess raw NIfTI scans, segment in-vivo and ex-vivo images, initialise candidate slab positions, and run affine registration over those candidates.
 
+# LLM Usage
+
 This pipeline was developed with use of LLMs in a pair-programming fashion. All code has been manually reviewed and edited to align with goals.
 
 ## Repository Layout
